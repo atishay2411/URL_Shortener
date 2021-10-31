@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block title %}View all URLS{% endblock %}
+
+
+
+{% block content %}
+<h1>History</h1>
+<h3>All the previously shortened URLs are:-</h3>
+    {% for url in vals %}
+        <p><strong>Short:http://127.0.0.1:5000/</strong>{{url.short}} <strong>Long:</strong> {{url.long}}</p>
+    {% endfor %}
+{% endblock %}

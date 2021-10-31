@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+
+    <style>
+        body {
+            background: url(/static/confetti.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+        }
+        </style>
+</head>
+
+
+
+
+<body style="text-align: center;">
+    <div style="font-weight: bolder; font-size: 30px;">
+    <h1>URL Shortener</h1>
+    
+
+
+<h1><a href="http://127.0.0.1:5000//{{short_url_display}}">http://127.0.0.1:5000//{{short_url_display}}</a></h1>
+
+
+
+<button href="http://127.0.0.1:5000//{{short_url_display}}"id="final" onclick="myFunction()">Copy</button>
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById('final')
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+	   
+		<a href="http://127.0.0.1:5000/" style="color: #fff!important;
+								padding: 10px 20px;
+								background: #39ac31;
+								margin: 20px 0;
+								display: inline-block;">Go to Home</a>
+
+</body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

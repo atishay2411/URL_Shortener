@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-Shortener</title>
+    <style>
+
+        .navbar{
+            background-color:black;
+            color: white;
+            margin: 0px;
+            padding: 18px
+        }
+
+
+        #his{
+  text-decoration: none;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size:100%
+  
+        }
+
+
+        body {
+           
+  background: url(static/background1.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        }
+
+
+
+
+        </style>
+</head>
+
+<body style="margin: 0;
+padding: 0;
+width: 100%; 
+text-align: center;
+ ">
+
+
+<nav class ='navbar'>
+    <a id = his href="{{url_for('history')}}">History</a>
+</nav>
+
+
+    <div style="position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+" >
+    
+        <form action="#" , method="post">
+            <label style="font-size: 45px; color: lightcyan;" for="url">  <strong>Enter a URL :</strong></label>
+            <input style="color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            margin: 20px 0; font-size: 20px;
+            display: inline-block;" type="url" name="site_url" id="url" placeholder="https://example.com" pattern="https://.*" size="50"
+                required>
+            <br>
+            <input style="color: #fff!important;
+            padding: 10px 20px;
+            background: #220c10;
+            margin: 20px 0; font-size: 25px;
+            display: inline-block;" type="submit" value="submit" class="btn btn-primary">
+        </form>
+        {% block content%}
+        {% endblock %}
+    </div>
+ 
+</body>
+
+</html>
